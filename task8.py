@@ -5,9 +5,6 @@ import pandas as pd
 url = 'https://books.toscrape.com/'
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
-url = 'https://books.toscrape.com/'
-response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')
 books = soup.find_all('article', class_='product_pod')
 
 book_data = []
